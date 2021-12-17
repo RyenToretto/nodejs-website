@@ -5,7 +5,7 @@ module.exports = {
         host: 'localhost',
         port: 3306,
         user: 'root',
-        password: 'root'
+        password: 'wangyuan-ky'
     },
     security: {
         secretKey: "secretKey",
@@ -13,8 +13,8 @@ module.exports = {
         expiresIn: 60 * 60
     },
     wechatKey: {
-        appId: 'wx123456789',
-        appSecret: '1234567890',
+        appId: 'wx345b42da830c9c3a',
+        appSecret: '7b20db9df27346658d68ee9cdc10ac7f',
         weChatUrl: 'https://api.weixin.qq.com/cgi-bin/'
     }
 }
