@@ -49,5 +49,7 @@
   "directories": {
     "doc": "doc"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "sequelize-cli": "^6.3.0"
+  }
 }
