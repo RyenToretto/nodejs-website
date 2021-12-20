@@ -33,7 +33,7 @@
               <Upload
                 multiple
                 type="drag"
-                action="http://up-z2.qiniu.com"
+                action="http://up-z1.qiniu.com"
                 :show-upload-list="false"
                 :on-success="uploadSuccess"
                 :on-error="uploadError"
@@ -203,7 +203,7 @@
             bgimg: ''
           }
         } catch (e) {
-          
+
         }
       },
       // 海报更新
@@ -223,7 +223,7 @@
             bgimg: ''
           }
         } catch (e) {
-          
+
         }
       },
       // 编辑海报

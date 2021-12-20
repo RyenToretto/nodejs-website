@@ -19,7 +19,8 @@ const router = new Router({
  */
 router.get('/wechat/qrcode', async (ctx) => {
     const v = await wechatApi.getWeChatQrcode();
-    ctx.response.status = 200;
+	console.log('v =', v);
+	ctx.response.status = 200;
     ctx.body = res.json(v);
 });
 
@@ -87,14 +88,14 @@ router.post('/wechat/token', async (ctx) => {
 		ctx.body = 'success';
 		ctx.response.status = 200;
 	}
-    
+
 });
 
 function check(timestamp,nonce,signature,token){
 	var currSign,tmp;
 	tmp = [token,timestamp,nonce].sort().join("");
 	currSign = crypto.createHash("sha1").update(tmp).digest("hex");
-	return (currSign === signature);  
+	return (currSign === signature);
 };
 
 module.exports = router

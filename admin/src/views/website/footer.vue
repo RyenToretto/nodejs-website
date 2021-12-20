@@ -22,7 +22,7 @@
             <Upload
               multiple
               type="drag"
-              action="http://up-z2.qiniu.com"
+              action="http://up-z1.qiniu.com"
               :show-upload-list="false"
               :on-success="uploadLogoSuccess"
               :on-error="uploadError"
@@ -115,7 +115,7 @@
           //this.$router.push('/article');
           this._getWebFooterInfo();
         } catch (e) {
-          
+
         }
       },
       // 获取基本信息

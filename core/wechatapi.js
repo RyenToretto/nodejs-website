@@ -1,6 +1,6 @@
-const redis = require("redis");  
+const redis = require("redis");
 const request = require('request');
-const client = redis.createClient(); 
+const client = redis.createClient();
 const { wechatKey } = require('../config/config.js');
 
 const AccessTokenUrl = wechatKey.weChatUrl+'token?grant_type=client_credential&appid='+wechatKey.appId+'&secret='+wechatKey.appSecret;
@@ -13,10 +13,12 @@ class wechatApi {
         return new Promise(function(resolve, reject){
             client.get('WeChatAccessToken',function (err,v) {
                 if(v){
+                    console.log('\n\n如果存在token则直接返回: ', v);
                     //如果存在token则直接返回
                     resolve(v)
                 }else{
                     //如果不存在token则向微信获取在返回
+                    console.log('\n\n如果不存在token则向微信获取在返回: ', AccessTokenUrl);
                     request(AccessTokenUrl,function(error, response, body){
                         if (error) {
                             reject(error);
@@ -35,14 +37,15 @@ class wechatApi {
     static async getWeChatQrcode() {
         const token = await this._updateAccessToken();
         const qrcodeUrl = wechatKey.weChatUrl+'qrcode/create?access_token='+token;
+        console.log('weChatUrl =', wechatKey.weChatUrl, qrcodeUrl);
         return new Promise(function(resolve, reject){
             request({
                 url: qrcodeUrl,
                 method: "POST",
                 json: true,
                 body: {
-                    "expire_seconds": 120, 
-                    "action_name": "QR_SCENE", 
+                    "expire_seconds": 120,
+                    "action_name": "QR_SCENE",
                     "action_info": {
                         "scene": {
                             "scene_id": 658801

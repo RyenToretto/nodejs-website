@@ -34,7 +34,7 @@
                     <Upload
                       multiple
                       type="drag"
-                      action="http://up-z2.qiniu.com"
+                      action="http://up-z1.qiniu.com"
                       :show-upload-list="false"
                       :on-success="uploadIconSuccess"
                       :on-error="uploadError"
@@ -56,7 +56,7 @@
                     <Upload
                       multiple
                       type="drag"
-                      action="http://up-z2.qiniu.com"
+                      action="http://up-z1.qiniu.com"
                       :show-upload-list="false"
                       :on-success="uploadImageSuccess"
                       :on-error="uploadError"
@@ -254,7 +254,7 @@
           this.$Message.success('更新成功!');
           this._viewCreateAdHeader();
         } catch (e) {
-          
+
         }
       },
       async _getCreateAdList() {
@@ -272,7 +272,7 @@
             image: ''
           };
         } catch (e) {
-          
+
         }
       },
       // 提交
@@ -343,5 +343,5 @@
 </script>
 
 <style scoped>
-  
+
 </style>

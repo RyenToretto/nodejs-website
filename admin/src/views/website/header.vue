@@ -16,7 +16,7 @@
             <Upload
               multiple
               type="drag"
-              action="http://up-z2.qiniu.com"
+              action="http://up-z1.qiniu.com"
               :show-upload-list="false"
               :on-success="uploadLogo1Success"
               :on-error="uploadError"
@@ -38,7 +38,7 @@
             <Upload
               multiple
               type="drag"
-              action="http://up-z2.qiniu.com"
+              action="http://up-z1.qiniu.com"
               :show-upload-list="false"
               :on-success="uploadLogo2Success"
               :on-error="uploadError"
@@ -133,7 +133,7 @@
           //this.$router.push('/article');
           this._getWebHeaderInfo();
         } catch (e) {
-          
+
         }
       },
       // 获取基本信息
