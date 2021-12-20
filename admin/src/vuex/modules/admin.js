@@ -13,6 +13,15 @@ const mutations = {
 }
 
 const actions = {
+  // 管理员注册
+  async register({state, commit}, params) {
+    return admin.register({
+      ...params,
+      password1: 'Admin123',
+      password2: 'Admin123',
+      nickname: '寇剑峰'
+    });
+  },
   // 管理员登录
   async login({state, commit}, params) {
     return admin.login(params);

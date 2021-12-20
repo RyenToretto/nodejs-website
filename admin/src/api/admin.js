@@ -1,6 +1,10 @@
 import fetch from './fetch';
 
 export default {
+  // 注册
+  register(params) {
+    return fetch.post('/admin/register', params)
+  },
   // 登录
   login(params) {
     return fetch.post('/admin/login', params)

@@ -28,14 +28,13 @@ Admin.init({
         set(val) {
             // 加密
             const salt = bcrypt.genSaltSync(10);
-            // 生成加密密码
+            // val="Admin123"; salt="$2a$10$HZdJ1pfIpGcNAJwSf3JPwu"
             const psw = bcrypt.hashSync(val, salt);
             this.setDataValue("password", psw);
         }
     },
     // 用户openID
     openid: Sequelize.STRING,
-    
     created_at: {
         type: Sequelize.DATE,
         get() {

@@ -41,7 +41,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `nickname`, `username`, `password`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'wanzikun', 'eoen', '$2a$10$PAjR03w5.xFhAlKYTjmd0O7/krSWKky0vBw2v2nrsDNL/2RWYMh7y', '2019-10-05 20:15:45', '2019-10-05 20:15:45', NULL);
+(1, '寇剑峰', 'koujianfeng', '$2a$10$HZdJ1pfIpGcNAJwSf3JPwuoh/liZZhNMjx5MHeQyeEis6cDQjHhhi', '2021-12-20 16:58:14', '2021-12-20 16:58:14', NULL);
 
 -- --------------------------------------------------------
 
